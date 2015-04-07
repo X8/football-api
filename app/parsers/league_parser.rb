@@ -1,13 +1,10 @@
 class LeagueParser
   def initialize(file)
-    @parser  = Nokogiri::XML(file.read)
+    @parser = Nokogiri::XML(file.read)
   end
 
   def created_at
-    DateTime.new(
-      date['year'].to_i, date['month'].to_i,  date['date'].to_i,
-      time['hour'].to_i, time['minute'].to_i, time['second'].to_i
-    )
+    DateParser.new(root).date
   end
 
   def version
@@ -40,16 +37,8 @@ class LeagueParser
     root.xpath('league').first
   end
 
-  def date
-    root.xpath('date').first
-  end
-
   def season_node
     root.xpath('season').first
-  end
-
-  def time
-    root.xpath('time').first
   end
 
   def convert(node)
