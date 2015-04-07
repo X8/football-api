@@ -1,4 +1,4 @@
-class LeagueParser
+class TeamParser
   def initialize(file)
     @parser = Nokogiri::XML(file.read)
   end

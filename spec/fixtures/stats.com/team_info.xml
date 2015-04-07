@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+  <sports-teams>
+    <date year="2012" month="8" date="27" day="1"/>
+    <time hour="16" minute="48" second="18" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+    <version number="3"/>
+    <league global-id="39" name="English Premier League" alias="EPL" display-name=""/>
+    <season year="2012" id="1" description="2012 EPL Season"/>
+    <ifb-soccer-teams>
+        <team-info global-id="6145" id="21" location="Arsenal" name="" alias="ARS" display-name="Arsenal" city="London" country-id="20" country="England" year-founded="1886"/>
+    </ifb-soccer-teams>
+  </sports-teams>
+</sports-statistics>

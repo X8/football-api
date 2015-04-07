@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+    <sports-schedule>
+    <date year="2012" month="9" date="17" day="1"/>
+    <time hour="12" minute="55" second="00" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+    <version number="5"/>
+    <league global-id="80" name="European Championships" alias="EURO" display-name=""/>
+    <season year="2012" id="1" description="Euro 2012"/>
+     <soccer-ifb-schedule>
+      <game-schedule>
+       <date year="2012" month="6" date="8" day="5"/>
+       <time hour="12" minute="00" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+       <local-game-date year="2012" month="6" date="8" day="5"/>
+       <local-time hour="18" minute="00"/>
+       <tba tba="false"/>
+       <gamecode global-code="1171996" code="2012060810252"/>
+       <coverage level="6"/>
+       <aggregate-partner-game global-code=""/>
+       <game-type id="7" description="Group Stage" replay="false"/>
+       <week week="15" original-week="15"/>
+       <status status-id="4" status="Final"/>
+       <stadium global-id="10279" id="3038" name="National Stadium"/>
+       <match-number number="1"/>
+       <tv>
+        <station id="1" call-letters="T5" name="Telecinco" country-id="39" country="Spain"/>
+        <station id="3" call-letters="ESPN" name="" country-id="1" country="United States"/>
+       </tv>
+       <home-team>
+        <team-info global-id="7634" id="252" location="Poland" name="" alias="POL" display-name="Poland" spanish-country-name="Polonia"/>
+        <group id="11" group="Group A"/>
+        <outcome outcome="Tie" score="1" shootout-goals="0" shootout-outcome=""/>
+       </home-team>
+       <visiting-team>
+        <team-info global-id="7649" id="274" location="Greece" name="" alias="GRE" display-name="Greece" spanish-country-name="Grecia"/>
+        <group id="11" group="Group A"/>
+        <outcome outcome="Tie" score="1" shootout-goals="0" shootout-outcome=""/>
+       </visiting-team>
+       <total-periods periods="2"/>
+      </game-schedule>
+    </soccer-ifb-schedule>
+   </sports-schedule>
+</sports-statistics>
