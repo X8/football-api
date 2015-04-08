@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe TeamParser do
-  let(:xml) { File.open(Rails.root.join("spec/fixtures/stats.com/team_info.xml")) }
+  let(:xml) { File.open(Rails.root.join("spec/fixtures/stats.com/team_info.xml")).read }
 
   subject { described_class.new(xml) }
 

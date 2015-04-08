@@ -1,6 +1,6 @@
 class TeamParser
-  def initialize(file)
-    @parser = Nokogiri::XML(file.read)
+  def initialize(content)
+    @parser = Nokogiri::XML(content)
   end
 
   def created_at

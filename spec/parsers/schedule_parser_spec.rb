@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ScheduleParser do
-  let(:xml) { File.open(Rails.root.join("spec/fixtures/stats.com/schedule.xml")) }
+  let(:xml) { File.open(Rails.root.join("spec/fixtures/stats.com/schedule.xml")).read }
 
   subject { described_class.new(xml) }
 

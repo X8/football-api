@@ -1,7 +1,6 @@
 class ScheduleParser
-  def initialize(file)
-    @content = file.read
-    @parser  = Nokogiri::XML(@content)
+  def initialize(content)
+    @parser = Nokogiri::XML(content)
   end
 
   def created_at
