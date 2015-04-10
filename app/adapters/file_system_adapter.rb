@@ -29,6 +29,10 @@ class FileSystemAdapter
     list("roster/*.xml")
   end
 
+  def get_event_codes
+    read("event_codes.xml")
+  end
+
   private
 
   def list(path)

@@ -40,4 +40,10 @@ describe FileSystemAdapter do
       expect(subject.get_rosters).to match_array(["Roster 1 info\n", "Roster 2 info\n"])
     end
   end
+
+  describe "#get_event_codes" do
+    it "returns roster file content" do
+      expect(subject.get_event_codes).to include("Event codes info")
+    end
+  end
 end

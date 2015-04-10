@@ -4,5 +4,7 @@ Rails.application.routes.draw do
       resources :fixtures, only: :index
       resources :rosters, only: [:index, :show]
     end
+
+    resources :event_codes
   end
 end
