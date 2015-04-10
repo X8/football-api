@@ -28,4 +28,16 @@ describe FileSystemAdapter do
       expect(subject.get_schedules).to match_array(["Schedule 1 info\n", "Schedule 2 info\n"])
     end
   end
+
+  describe "#get_roster" do
+    it "returns roster file content" do
+      expect(subject.get_roster(1)).to include("Roster 1 info")
+    end
+  end
+
+  describe "#get_rosters" do
+    it "returns roster file content" do
+      expect(subject.get_rosters).to match_array(["Roster 1 info\n", "Roster 2 info\n"])
+    end
+  end
 end

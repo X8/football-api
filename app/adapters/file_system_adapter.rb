@@ -21,6 +21,14 @@ class FileSystemAdapter
     list("schedule/*.xml")
   end
 
+  def get_roster(id)
+    read("roster/#{id}.xml")
+  end
+
+  def get_rosters
+    list("roster/*.xml")
+  end
+
   private
 
   def list(path)

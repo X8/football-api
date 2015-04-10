@@ -27,7 +27,7 @@ describe FixtureRepository do
         {
           id: "274",
           type: "away",
-          score: "1",
+          score: "0",
           name: "Greece",
           abbreviation: "GRE",
           location: "Greece"
@@ -38,15 +38,9 @@ describe FixtureRepository do
 
   subject { FixtureRepository.new(adapter) }
 
-  describe "#get_fixtures" do
-    it "returns fixture objects" do
-      expect(subject.get_fixtures).to include(fixture)
-    end
-  end
-
   describe "#get_fixture" do
     it "returns fixture object" do
-      expect(subject.get_fixture(80, 1171996)).to eq(fixture)
+      expect(subject.get_fixture(1)).to include(fixture)
     end
   end
 end
