@@ -26,14 +26,13 @@
         <station id="3" call-letters="ESPN" name="" country-id="1" country="United States"/>
        </tv>
        <home-team>
-        <team-info global-id="7634" id="252" location="Poland" name="" alias="POL" display-name="Poland" spanish-country-name="Polonia"/>
+        <team-info global-id="7634" id="252" location="Poland" name="Poland" alias="POL" display-name="Poland" spanish-country-name="Polonia"/>
         <group id="11" group="Group A"/>
         <outcome outcome="Tie" score="1" shootout-goals="0" shootout-outcome=""/>
        </home-team>
        <visiting-team>
-        <team-info global-id="7649" id="274" location="Greece" name="" alias="GRE" display-name="Greece" spanish-country-name="Grecia"/>
+        <team-info global-id="7649" id="274" location="Greece" name="Greece" alias="GRE" display-name="Greece" spanish-country-name="Grecia"/>
         <group id="11" group="Group A"/>
-        <outcome outcome="Tie" score="1" shootout-goals="0" shootout-outcome=""/>
        </visiting-team>
        <total-periods periods="2"/>
       </game-schedule>

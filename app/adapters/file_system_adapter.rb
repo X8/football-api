@@ -10,10 +10,34 @@ class FileSystemAdapter
   end
 
   def get_leagues
-    Dir[@root.join("team_info/*.xml")].map { |path| File.read(path) }
+    list("team_info/*.xml")
+  end
+
+  def get_schedule(id)
+    read("schedule/#{id}.xml")
+  end
+
+  def get_schedules
+    list("schedule/*.xml")
+  end
+
+  def get_roster(id)
+    read("roster/#{id}.xml")
+  end
+
+  def get_rosters
+    list("roster/*.xml")
+  end
+
+  def get_event_codes
+    read("event_codes.xml")
   end
 
   private
+
+  def list(path)
+    Dir[@root.join(path)].map { |path| File.read(path) }
+  end
 
   def read(path)
     File.open(File.join(@root, path)).read
