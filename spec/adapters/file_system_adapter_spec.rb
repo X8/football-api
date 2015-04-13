@@ -46,4 +46,10 @@ describe FileSystemAdapter do
       expect(subject.get_event_codes).to include("Event codes info")
     end
   end
+
+  describe "#get_events" do
+    it "returns events file content" do
+      expect(subject.get_events(1, 1)).to include("Events info")
+    end
+  end
 end

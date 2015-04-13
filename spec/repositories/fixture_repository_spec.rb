@@ -38,9 +38,15 @@ describe FixtureRepository do
 
   subject { FixtureRepository.new(adapter) }
 
+  describe "#get_fixtures" do
+    it "returns fixture object" do
+      expect(subject.get_fixtures(1)).to include(fixture)
+    end
+  end
+
   describe "#get_fixture" do
     it "returns fixture object" do
-      expect(subject.get_fixture(1)).to include(fixture)
+      expect(subject.get_fixture(1, 1171996)).to eq(fixture)
     end
   end
 end

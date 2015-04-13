@@ -5,7 +5,7 @@ class EventCodeRepository
 
   def get_codes
     EventCodeParser.new(@adapter.get_event_codes).codes.map do |code|
-      Event.new(code)
+      EventCode.new(code)
     end
   end
 

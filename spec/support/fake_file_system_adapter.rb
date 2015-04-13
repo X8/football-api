@@ -26,4 +26,8 @@ class FakeFileSystemAdapter
   def get_event_codes
     File.open(Rails.root.join("spec/fixtures/stats.com/event_code.xml")).read
   end
+
+  def get_events(league_id, id)
+    File.open(Rails.root.join("spec/fixtures/stats.com/pbp.xml")).read
+  end
 end

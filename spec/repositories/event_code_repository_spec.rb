@@ -3,7 +3,7 @@ require 'rails_helper'
 describe EventCodeRepository do
   let(:adapter) { FakeFileSystemAdapter.new }
   let(:event) do
-    Event.new(
+    EventCode.new(
       id: 1,
       text: "Ball Location"
     )

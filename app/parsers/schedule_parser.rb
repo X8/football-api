@@ -30,7 +30,8 @@ class ScheduleParser
   private
 
   def attributes_for_game(game)
-    @attributes_for_game ||= Hash.from_xml(game.to_s)['game_schedule']
+    @attributes_for_game       ||= {}
+    @attributes_for_game[game] ||= Hash.from_xml(game.to_s)['game_schedule']
   end
 
   def attributes_for_stadium(game)

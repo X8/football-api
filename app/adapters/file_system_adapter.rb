@@ -33,6 +33,10 @@ class FileSystemAdapter
     read("event_codes.xml")
   end
 
+  def get_events(league_id, id)
+    read("events/#{league_id}/#{id}.xml")
+  end
+
   private
 
   def list(path)

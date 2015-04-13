@@ -11,6 +11,5 @@ class Player
     attribute :birthdate, Birthdate
     attribute :birthplace, Birthplace
     attribute :nationality, Nationality
-
   end
 end
