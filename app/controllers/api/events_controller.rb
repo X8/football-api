@@ -9,6 +9,12 @@ class Api::EventsController < ApplicationController
     respond_with(repository.get_event(league_id, fixture_id, id))
   end
 
+  def start
+    ReplayService.new(Pusher, league_id, fixture_id).start
+
+    render nothing: true
+  end
+
   private
 
   def league_id

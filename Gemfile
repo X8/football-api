@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'nokogiri'
 gem 'virtus'
 gem 'responders', '~> 2.0'
+gem 'pusher'
 
 group :development, :test do
   gem 'byebug'

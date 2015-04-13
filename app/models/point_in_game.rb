@@ -7,4 +7,8 @@ class PointInGame
     attribute :seconds, Integer
     attribute :additional_minutes, Integer
   end
+
+  def to_i
+    minutes.minutes + seconds.seconds + additional_minutes.minutes
+  end
 end
