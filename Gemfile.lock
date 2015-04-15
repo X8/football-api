@@ -84,6 +84,7 @@ GEM
       multi_json (~> 1.0)
       signature (~> 0.1.8)
     rack (1.6.0)
+    rack-cors (0.3.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -170,6 +171,7 @@ DEPENDENCIES
   nokogiri
   puma
   pusher
+  rack-cors
   rails (= 4.2.1)
   rails_12factor
   responders (~> 2.0)
