@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+  <sports-play-by-play>
+    <date year="2012" month="3" date="20" day="2"/>
+    <time hour="17" minute="01" second="31" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+    <version number="5"/>
+    <league global-id="54" name="Liga Espana" alias="Liga" display-name=""/>
+    <season year="2011" id="1" description="La Liga"/>
+    <soccer-ifb-game>
+      <date year="2012" month="3" date="20" day="2"/>
+      <time hour="15" minute="00" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+      <local-game-date year="2012" month="3" date="20" day="2"/>
+      <local-time hour="20" minute="00"/>
+      <gamecode global-code="1070008" code="2012032010165"/>
+      <coverage level="5"/>
+      <aggregate-partner-game global-code=""/>
+      <game-type id="1" description="Regular Season" replay="false"/>
+      <week week="29"/>
+      <gamestate status-id="4" status="Final" period="2" minutes="" seconds="" additional-minutes=""/>
+      <stadium global-id="5267" id="103" name="Reyno de Navarra"/>
+      <match-number number=""/>
+      <visiting-team>
+        <team-info global-id="6174" id="1199" location="Getafe" name="" alias="GET" display-name="Getafe"/>
+        <team primary-color="FFFF00" shorts-color="FFFF00"/>
+        <record wins="9" ties="9" losses="10"/>
+        <linescore score="0" shots="13">
+          <half half="1" score="0" shots="6"/>
+          <half half="2" score="0" shots="7"/>
+        </linescore>
+        <formation formation="4-2-3-1"/>
+      </visiting-team>
+      <home-team>
+        <team-info global-id="6175" id="1199" location="Osasuna" name="" alias="OSA" display-name="Osasuna"/>
+        <team primary-color="FF0000" shorts-color="0000FF"/>
+        <record wins="9" ties="13" losses="6"/>
+        <linescore score="0" shots="15">
+          <half half="1" score="0" shots="9"/>
+          <half half="2" score="0" shots="6"/>
+        </linescore>
+        <formation formation="4-2-3-1"/>
+      </home-team>
+      <plays>
+        <play half="1" minutes="15" seconds="15" additional-minutes="0" seq-number="6" event-number="6" event-text="Cross" global-team-id="6175" team-id="1199" away-score="1" home-score="0" global-offensive-player-id="348559" global-defensive-player-id="348721" global-assisting-player-id="" offensive-player-id="110683" defensive-player-id="77424" assisting-player-id="" offensive-player-first-name="Patxi" offensive-player-last-name="Puñal" offensive-player-shirt-name="Puñal" offensive-player-full-first-name="Francisco" offensive-player-full-last-name="Punal Martinez" defensive-player-first-name="" defensive-player-last-name="Alexis" defensive-player-shirt-name="Alexis" defensive-player-full-first-name="Alexis" defensive-player-full-last-name="Ruano Delgado" assisting-player-first-name="" assisting-player-last-name="" assisting-player-shirt-name="" assisting-player-full-first-name="" assisting-player-full-last-name="" corner-kick-result="Headed Out - Out of Play" field-area="VE20" x-coord="10" y-coord="20" cross-type="Cross"/>
+      </plays>
+    </soccer-ifb-game>
+  </sports-play-by-play>
+</sports-statistics>

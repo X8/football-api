@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+  <sports-roster>
+    <date year="2012" month="3" date="20" day="2"/>
+    <time hour="18" minute="18" second="23" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+    <version number="3"/>
+    <league global-id="54" name="Liga Espana" alias="Liga" display-name=""/>
+    <season year="2011" id="1" description="La Liga"/>
+    <ifb-soccer-roster>
+      <ifb-team-roster>
+        <team-info global-id="8312" id="1199" location="Sporting" name="" alias="GIJ" display-name="Sporting"/>
+        <manager id="565093" first="Javi" last="Clemente"/>
+        <ifb-roster-player>
+          <name first-name="" last-name="Alain" shirt-name="Alain" full-first="Alain" full-last="Alvarez Menendez"/>
+          <player-position english="Defender" spanish="Defensa"/>
+          <player-number number="29"/>
+          <player-code global-id="596312" id="110683"/>
+          <height inches="72" meters="1.83"/>
+          <weight pounds="168" kg="76"/>
+          <birth-date year="1989" month="11" date="13"/>
+          <birth-loc city="Gijon" city-id="" state="" country="Spain" spanish_country="España" birth_country_id="39"/>
+          <nationality id="39" name="Spain"/>
+        </ifb-roster-player>
+        <ifb-roster-player>
+          <name first-name="" last-name="Ayoze" shirt-name="Ayoze" full-first="Ayoze" full-last="Garcia Perez"/>
+          <player-position english="Midfielder" spanish="Medio"/>
+          <player-number number="7"/>
+          <player-code global-id="444424" id="77424"/>
+          <height inches="68" meters="1.72"/>
+          <weight pounds="159" kg="72"/>
+          <birth-date year="1985" month="11" date="22"/>
+          <birth-loc city="Puerto de la Cruz" city-id="" state="" country="Spain" spanish_country="España" birth_country_id="39"/>
+          <nationality id="39" name="Spain"/>
+        </ifb-roster-player>
+      </ifb-team-roster>
+    </ifb-soccer-roster>
+  </sports-roster>
+</sports-statistics>

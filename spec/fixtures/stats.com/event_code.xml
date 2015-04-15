@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+  <sports-event-codes>
+    <date year="2014" month="12" date="2" day="2"/>
+    <time hour="17" minute="14" second="37" timezone="Eastern" utc-hour="-5" utc-minute="00"/>
+    <version number="2"/>
+    <season season=""/>
+    <league id="0" name=""/>
+    <event-codes>
+      <event id="1" text="Ball Location"/>
+      <event id="2" text="Caution"/>
+    </event-codes>
+  </sports-event-codes>
+</sports-statistics>
