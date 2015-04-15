@@ -1,6 +1,8 @@
 Football API
 ============
 
+[hackday-api.herokuapp.com](https://hackday-api.herokuapp.com/)
+
 A Ruby on Rails app that provides football data in JSON format.
 You can fork it and adjust to your own needs.
 
