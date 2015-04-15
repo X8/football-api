@@ -34,6 +34,13 @@ Put the files to the db/data directory.
     cd db
     unzip sport-data.zip
 
+PUSHER URL
+==========
+
+Copy .env.example to .env then edit the file and put your PUSHER_URL there.
+
+    cp .env.example .env
+
 Start the server
 ================
 
