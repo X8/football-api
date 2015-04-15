@@ -7,6 +7,7 @@ gem 'nokogiri'
 gem 'virtus'
 gem 'responders', '~> 2.0'
 gem 'pusher'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
