@@ -57,9 +57,8 @@ class ScheduleParser
 
     {
       id:             team["team_info"]["id"],
-      name:           team["team_info"]["name"],
+      name:           team["team_info"]["display_name"],
       abbreviation:   team["team_info"]["alias"],
-      location:       team["team_info"]["location"],
       score:          team.fetch("outcome", {}).fetch("score", 0)
     }
   end

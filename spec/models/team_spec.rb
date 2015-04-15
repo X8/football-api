@@ -7,8 +7,7 @@ describe Team do
       type: "home_team",
       score: "10",
       name: "Team",
-      abbreviation: "T",
-      location: "UK"
+      abbreviation: "T"
     }
   end
 
@@ -32,9 +31,5 @@ describe Team do
 
   it "#abbreviation" do
     expect(subject.abbreviation).to eq("T")
-  end
-
-  it "#location" do
-    expect(subject.location).to eq("UK")
   end
 end

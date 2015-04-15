@@ -21,16 +21,14 @@ describe FixtureRepository do
           type: "home",
           score: "1",
           name: "Poland",
-          abbreviation: "POL",
-          location: "Poland"
+          abbreviation: "POL"
         },
         {
           id: "274",
           type: "away",
           score: "0",
           name: "Greece",
-          abbreviation: "GRE",
-          location: "Greece"
+          abbreviation: "GRE"
         }
       ]
     )

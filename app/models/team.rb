@@ -7,6 +7,5 @@ class Team
     attribute :score, Integer
     attribute :name, String
     attribute :abbreviation, String
-    attribute :location, String
   end
 end
