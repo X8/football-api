@@ -10,9 +10,16 @@ class Api::EventsController < ApplicationController
   end
 
   def start
-    ReplayService.new(Pusher, league_id, fixture_id).start
+    service = ReplayService.new(Pusher, league_id, fixture_id)
+    service.start
 
-    render nothing: true
+    render json: {
+      message: "Application started sending events on the channel '#{service.channel}'.",
+      pusher: {
+        key: Pusher.key,
+        channel: service.channel
+      }
+    }
   end
 
   private
