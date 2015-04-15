@@ -5,7 +5,7 @@ class RosterRepository
 
   def get_rosters(league_id)
     parser = RosterParser.new(@adapter.get_roster(league_id))
-    parser.teams.map { |team| Roster.new(team: team, players: team[:players]) }
+    parser.rosters.map { |roster| Roster.new(roster) }
   end
 
   def get_roster(league_id, id)

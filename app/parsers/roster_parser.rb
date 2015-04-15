@@ -11,11 +11,15 @@ class RosterParser
     root.xpath('version').first['number']
   end
 
-  def teams
+  def rosters
     root.xpath('ifb-soccer-roster/ifb-team-roster').map do |team|
       attributes = Hash.from_xml(team.to_s)['ifb_team_roster']
 
-      attributes_for_team(attributes).merge(attributes_for_players(attributes))
+      {
+        team:    attributes_for_team(attributes),
+        players: attributes_for_players(attributes),
+        manager: attributes_for_manager(attributes)
+      }
     end
   end
 
@@ -24,7 +28,7 @@ class RosterParser
   def attributes_for_players(attributes)
     players = attributes['ifb_roster_player']
 
-    players.map! do |player|
+    players.map do |player|
       name = player["name"]
       {
         id:          player["player_code"]["id"],
@@ -38,8 +42,6 @@ class RosterParser
         nationality: player["nationality"].symbolize_keys
       }
     end
-
-    { players: players }
   end
 
   def attributes_for_team(attributes)
@@ -50,6 +52,14 @@ class RosterParser
       abbreviation:   team["alias"],
       location:       team["location"],
       score:          team.fetch("outcome", {}).fetch("score", 0)
+    }
+  end
+
+  def attributes_for_manager(attributes)
+    manager = attributes['manager']
+    {
+      first_name: manager['first'],
+      last_name:  manager['last']
     }
   end
 

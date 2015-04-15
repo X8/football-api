@@ -13,10 +13,12 @@ describe RosterParser do
     expect(subject.version).to eq("3")
   end
 
-  describe "#teams" do
-    let(:team) { subject.teams.first }
+  describe "#rosters" do
+    let(:roster) { subject.rosters.first }
 
-    describe "one team" do
+    describe "one roster" do
+      let(:team) { roster[:team] }
+
       it "includes team id" do
         expect(team).to include(id: "1199")
       end
@@ -36,71 +38,83 @@ describe RosterParser do
       it "includes score (missing)" do
         expect(team).to include(score: 0)
       end
+    end
 
-      describe "players" do
-        let(:player) { team[:players].first }
+    describe "players" do
+      let(:player) { roster[:players].first }
 
-        describe "one player" do
-          it "includes id" do
-            expect(player).to include(id: "110683")
-          end
-
-          it "includes first name" do
-            expect(player).to include(first_name: "Alain")
-          end
-
-          it "includes last name" do
-            expect(player).to include(last_name: "Alain")
-          end
-
-          it "includes player postition" do
-            expect(player).to include(position: "Defender")
-          end
-
-          it "includes height" do
-            expect(player).to include(height: "72")
-          end
-
-          it "includes weight" do
-            expect(player).to include(weight: "168")
-          end
-
-          describe "birthdate" do
-            let(:birthdate) { player[:birthdate] }
-
-            it "includes year" do
-              expect(birthdate).to include(year: "1989")
-            end
-
-            it "includes month" do
-              expect(birthdate).to include(month: "11")
-            end
-
-            it "includes date" do
-              expect(birthdate).to include(date: "13")
-            end
-          end
+      describe "one player" do
+        it "includes id" do
+          expect(player).to include(id: "110683")
         end
 
-        describe "birthplace" do
-          let(:birthplace) { player[:birthplace] }
-
-          it "includes country" do
-            expect(birthplace).to include(country: "Spain")
-          end
-
-          it "includes city" do
-            expect(birthplace).to include(city: "Gijon")
-          end
+        it "includes first name" do
+          expect(player).to include(first_name: "Alain")
         end
 
-        describe "nationality" do
-          let(:nationality) { player[:nationality] }
+        it "includes last name" do
+          expect(player).to include(last_name: "Alain")
+        end
 
-          it "includes name" do
-            expect(nationality).to include(name: "Spain")
+        it "includes player postition" do
+          expect(player).to include(position: "Defender")
+        end
+
+        it "includes height" do
+          expect(player).to include(height: "72")
+        end
+
+        it "includes weight" do
+          expect(player).to include(weight: "168")
+        end
+
+        describe "birthdate" do
+          let(:birthdate) { player[:birthdate] }
+
+          it "includes year" do
+            expect(birthdate).to include(year: "1989")
+          end
+
+          it "includes month" do
+            expect(birthdate).to include(month: "11")
+          end
+
+          it "includes date" do
+            expect(birthdate).to include(date: "13")
           end
         end
+      end
+
+      describe "birthplace" do
+        let(:birthplace) { player[:birthplace] }
+
+        it "includes country" do
+          expect(birthplace).to include(country: "Spain")
+        end
+
+        it "includes city" do
+          expect(birthplace).to include(city: "Gijon")
+        end
+      end
+
+      describe "nationality" do
+        let(:nationality) { player[:nationality] }
+
+        it "includes name" do
+          expect(nationality).to include(name: "Spain")
+        end
+      end
+    end
+
+    describe "manager" do
+      let(:manager) { roster[:manager] }
+
+      it "includes first name" do
+        expect(manager).to include(first_name: "Javi")
+      end
+
+      it "includes last name" do
+        expect(manager).to include(last_name: "Clemente")
       end
     end
   end

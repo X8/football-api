@@ -14,6 +14,10 @@ describe RosterRepository do
           score: 0,
           location: "Sporting"
         },
+        manager: {
+          first_name: 'Javi',
+          last_name: 'Clemente'
+        },
         players: [
           {
             id: "110683",
