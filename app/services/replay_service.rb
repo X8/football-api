@@ -6,7 +6,7 @@ class ReplayService
   end
 
   def channel
-    "match_#{@league_id}_#{@fixture_id}"
+    "match_#{@fixture_id}"
   end
 
   def current_event
@@ -23,20 +23,22 @@ class ReplayService
 
   def dispatch_event
     @pusher_client.trigger(channel, 'event', current_event.as_json)
-    Rails.logger.info("Event dispached: #{current_event.as_json}")
+    Rails.logger.info("Event published: #{current_event.as_json}")
     @current_event = next_event
   end
 
+  def start_in_thread
+    Thread.new { start }
+  end
+
   def start
-    Thread.new do
-      loop do
-        wait_time = time_to_wait
+    loop do
+      wait_time = time_to_wait
+      dispatch_event
+      sleep(wait_time)
+      if next_event.nil?
         dispatch_event
-        sleep(wait_time)
-        if next_event.nil?
-          dispatch_event
-          break
-        end
+        break
       end
     end
   end

@@ -11,12 +11,12 @@ class Api::EventsController < ApplicationController
 
   def start
     service = ReplayService.new(Pusher, league_id, fixture_id)
-    service.start
+    service.start_in_thread
 
     render json: {
       message: "Application started sending events on the channel '#{service.channel}'.",
       pusher: {
-        key: Pusher.key,
+        app_id: Pusher.app_id,
         channel: service.channel
       }
     }

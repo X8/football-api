@@ -8,7 +8,7 @@ describe ReplayService do
   let(:event_2)       { Event.new(sequence: 2, time: { minutes: 5, seconds: 11, additional_minutes: 0 }) }
   let(:event_3)       { Event.new(sequence: 3, time: { minutes: 5, seconds: 13, additional_minutes: 0 }) }
   let(:events)        { [event_1, event_2, event_3] }
-  let(:channel)       { "match_#{league_id}_#{fixture_id}" }
+  let(:channel)       { "match_#{fixture_id}" }
 
   subject { described_class.new(pusher_client, league_id, fixture_id) }
 
@@ -63,13 +63,13 @@ describe ReplayService do
     end
   end
 
-  describe "#start" do
+  describe "#start_in_thread" do
     it "sends all events" do
       expect(pusher_client).to receive(:trigger).with(channel, 'event', events.first.as_json)
       expect(pusher_client).to receive(:trigger).with(channel, 'event', events.second.as_json)
       expect(pusher_client).to receive(:trigger).with(channel, 'event', events.third.as_json)
 
-      subject.start.join
+      subject.start_in_thread.join
     end
   end
 
