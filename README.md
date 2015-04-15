@@ -65,7 +65,7 @@ to publish match events. You can subscribe to the events in your client. See the
 For example, you can replay Liverpool vs Manchester United action by action.
 In order to start the replay run `script/replay` and supply the ID of the match you want to simulate.
 
-    bundle exec script/replay 1439948
+    bundle exec ruby script/replay.rb 1439948
 
 Check out the wiki to see [which matches you can simulate](https://github.com/X8/football-api/wiki/Matches%20with%20full%20coverage)
 
