@@ -6,7 +6,7 @@ class ReplayService
   end
 
   def channel
-    "match_#{@fixture_id}"
+    "match-#{@fixture_id}"
   end
 
   def current_event
