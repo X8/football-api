@@ -3,13 +3,17 @@ class FixtureRepository
     @adapter = adapter
   end
 
-  def get_fixtures(id)
-    schedule_parser = ScheduleParser.new(@adapter.get_schedule(id))
-    fixtures = schedule_parser.games.map { |game| Fixture.new(attributes_for(game)) }
+  def get_fixtures(league_id)
+    schedule_parser = ScheduleParser.new(@adapter.get_schedule(league_id))
+    schedule_parser.games.map { |game| Fixture.new(attributes_for(game)) }
   end
 
   def get_fixture(league_id, id)
     get_fixtures(league_id).find { |fixture| fixture.id == id.to_i }
+  end
+
+  def get_fixtures_for_gameweek(league_id, gameweek)
+    get_fixtures(league_id).select { |fixture| fixture.week == gameweek }
   end
 
   private

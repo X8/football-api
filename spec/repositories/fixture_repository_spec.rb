@@ -47,4 +47,11 @@ describe FixtureRepository do
       expect(subject.get_fixture(1, 1171996)).to eq(fixture)
     end
   end
+
+  describe "#get_fixtures_for_gameweek" do
+    it "returns fixtures for a specific game week" do
+      expect(subject.get_fixture_for_gameweek(1, 14)).to eq([])
+      expect(subject.get_fixture_for_gameweek(1, 15)).to eq([fixture])
+    end
+  end
 end
