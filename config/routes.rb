@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     resources :leagues, only: [:index, :show] do
       resources :fixtures, only: [:index, :show] do
+        collection do
+          get "gameweek/:gameweek", action: "gameweek"
+        end
         resources :events, only: [:index, :show] do
           collection do
             get :start

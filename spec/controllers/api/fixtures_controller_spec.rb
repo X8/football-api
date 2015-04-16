@@ -16,4 +16,12 @@ describe Api::FixturesController do
       expect(subject).to be_success
     end
   end
+
+  describe "GET /leagues/:id/fixtures/gameweek/:gameweek" do
+    subject { get(:gameweek, league_id: 1, gameweek: 30, format: :json) }
+
+    it "responds with success" do
+      expect(subject).to be_success
+    end
+  end
 end
