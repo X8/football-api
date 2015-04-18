@@ -11,6 +11,14 @@ class EventRepository
     end
   end
 
+  def get_touch_events(league_id, id)
+    touch_event_parser = TouchEventParser.new(@adapter.get_touch_events(league_id, id))
+
+    touch_event_parser.events.map do |touch_event|
+      TouchEvent.new(touch_event)
+    end
+  end
+
   def get_event(league_id, match_id, id)
     get_events(league_id, match_id).find { |event| event.sequence == id.to_i }
   end

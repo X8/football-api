@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         collection do
           get "gameweek/:gameweek", action: "gameweek"
         end
+        resources :touch_events, only: [:index]
         resources :events, only: [:index, :show] do
           collection do
             get :start
