@@ -10,6 +10,7 @@ class Event
     attribute :time, PointInGame
     attribute :coordinates, Coordinate
     attribute :score, Score
+    attribute :description, String
     attribute :field_area, String
   end
 end

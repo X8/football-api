@@ -16,6 +16,7 @@ class EventRepository
         time:               PointInGame.new(event),
         coordinates:        Coordinate.new(x: event[:x_coord], y: event[:y_coord]),
         score:              Score.new(home: event[:home_score], away: event[:away_score]),
+        description:        event[:text],
         field_area:         event[:field_area]
       )
     end

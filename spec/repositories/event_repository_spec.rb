@@ -83,6 +83,7 @@ describe EventRepository do
       time: time,
       score: score,
       coordinates: coordinate,
+      description: "Puñal's cross",
       field_area: "VE20"
     )
   end
