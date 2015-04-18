@@ -37,6 +37,10 @@ class FileSystemAdapter
     read("events/#{league_id}/#{id}.xml")
   end
 
+  def get_touch_events(league_id, id)
+    read("touch_events/#{league_id}/#{id}.xml")
+  end
+
   private
 
   def list(path)

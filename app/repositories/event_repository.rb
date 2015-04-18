@@ -14,7 +14,7 @@ class EventRepository
   def get_touch_events(league_id, id)
     touch_event_parser = TouchEventParser.new(@adapter.get_touch_events(league_id, id))
 
-    touch_event_parser.events.map do |touch_event|
+    touch_event_parser.touch_events.map do |touch_event|
       TouchEvent.new(touch_event)
     end
   end

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-statistics>
+  <sports-play-by-play>
+    <date year="2015" month="3" date="21" day="6"/>
+    <time hour="13" minute="13" second="45" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+    <version number="8"/>
+    <league global-id="39" name="English Premier League" alias="EPL" display-name=""/>
+    <season year="2014" id="1" description="2014 EPL Season"/>
+      <soccer-ifb-game>
+         <date year="2015" month="3" date="21" day="6"/>
+         <time hour="11" minute="00" timezone="Eastern" utc-hour="-4" utc-minute="00"/>
+         <local-game-date year="2015" month="3" date="21" day="6"/>
+         <local-time hour="15" minute="00"/>
+         <gamecode global-code="1439939" code="2015032110022"/>
+         <coverage level="6"/>
+         <source id="0"/>
+         <aggregate-partner-game global-code=""/>
+         <penalty-shot-upcoming penalty-shot-upcoming="false"/>
+         <game-type id="1" description="Regular Season" replay="false"/>
+         <week week="30"/>
+         <gamestate status-id="4" status="Final" period="2" minutes="" seconds="" additional-minutes="" announced-minutes=""/>
+         <stadium global-id="5194" id="21" name="Villa Park"/>
+         <match-number number=""/>
+         <visiting-team>
+            <team-info global-id="8248" id="1141" location="Swansea City" name="" alias="SWA" display-name="Swansea City"/>
+            <team primary-color="FFFFFF" shorts-color="FFFFFF"/>
+           <record wins="12" ties="7" losses="11" points="43"/>
+            <linescore score="1" shots="9">
+               <half half="1" score="0" shots="4"/>
+               <half half="2" score="1" shots="5"/>
+            </linescore>
+            <formation formation="4-4-2"/>
+            <outcome outcome="Win" score="1" shootout-goals="0" shootout-outcome=""/>
+            <lineups-entered lineups-entered="true"/>
+         </visiting-team>
+         <home-team>
+            <team-info global-id="6144" id="22" location="Aston Villa" name="" alias="AST" display-name="Aston Villa"/>
+            <team primary-color="970045" shorts-color="FFFFFF"/>
+           <record wins="7" ties="7" losses="16" points="28"/>
+            <linescore score="0" shots="13">
+               <half half="1" score="0" shots="3"/>
+               <half half="2" score="0" shots="10"/>
+            </linescore>
+            <formation formation="4-4-2"/>
+            <outcome outcome="Loss" score="0" shootout-goals="0" shootout-outcome=""/>
+            <lineups-entered lineups-entered="true"/>
+         </home-team>
+        <touches>
+         <touch  sequence="1" half="1" minutes="1" seconds="2" additional-minutes="0" player-id="24702" global-id="347677" last-name="Gomis" first-name="Bafetimbi" shirt-name="" full-first="Bafetimbi" full-last="Gomis" team-id="1141" global-team-id="8248" team-name="Swansea City" touch-type-id="1" touch-type="Good Pass" x-coord="52" y-coord="32" x-coord-end="52" y-coord-end="36" recipient-player-id="25255" recipient-global-id="346172" recipient-last-name="Routledge" recipient-first-name="Wayne" recipient-shirt-name="" recipient-full-first="Wayne" recipient-full-last="Routledge"/>
+        </touches>
+      </soccer-ifb-game>
+  </sports-play-by-play>
+</sports-statistics>
