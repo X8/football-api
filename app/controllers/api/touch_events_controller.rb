@@ -20,7 +20,7 @@ class Api::TouchEventsController < ApplicationController
   end
 
   def repository
-    @repository ||= TouchEventRepository.new
+    @repository ||= EventRepository.new
   end
 end
 
