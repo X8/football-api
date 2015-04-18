@@ -5,8 +5,11 @@ class Event
     attribute :sequence, Integer
     attribute :type_id, Integer
     attribute :name, String
-    attribute :player, Player
-    attribute :recipient_player, Player
+    attribute :offensive_player, BasicPlayer
+    attribute :defensive_player, BasicPlayer
+    attribute :assisting_player, BasicPlayer
+    attribute :key_passing_player, BasicPlayer
+    attribute :replaced_player, BasicPlayer
     attribute :time, PointInGame
     attribute :coordinates, Coordinate
     attribute :score, Score

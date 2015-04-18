@@ -13,8 +13,24 @@ describe EventParser do
     end
 
     describe "event" do
-      it "includes half" do
-        expect(event).to include(half: "1")
+      it "includes event time" do
+        expect(event).to include(time: { half: "1", minutes: "15", seconds: "15", additional_minutes: "0" })
+      end
+
+      it "includes event name" do
+        expect(event).to include(name: "Cross")
+      end
+
+      it "includes field area" do
+        expect(event).to include(field_area: "VE20")
+      end
+
+      it "includes type_id" do
+        expect(event).to include(type_id: "6")
+      end
+
+      it "includes offensive player" do
+        expect(event).to include(offensive_player: { id: "110683", first_name: "Patxi", last_name: "Puñal" })
       end
     end
   end
@@ -22,18 +38,6 @@ describe EventParser do
   describe "#league_id" do
     it "returns league id" do
       expect(subject.league_id).to eq("54")
-    end
-  end
-
-  describe "#home_team_id" do
-    it "returns home team id" do
-      expect(subject.home_team_id).to eq("1199")
-    end
-  end
-
-  describe "#away_team_id" do
-    it "returns away team id" do
-      expect(subject.away_team_id).to eq("1199")
     end
   end
 end
